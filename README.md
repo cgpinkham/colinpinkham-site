@@ -1,7 +1,12 @@
-# Colin Pinkham Astro site, V11
+# Colin Pinkham Astro site — V14
 
-V11 carries forward the UUNET case study and smaller UIA logo, makes the UUNET work card explicitly readable as Internet Africa to UUNET SA, and adds the next case study, Verizon Business to MTN Business.
+V14 carries forward V13 and adds the VAST Networks case study at /work/vast.
 
-The Verizon and MTN case study is based on the existing career archive material and does not introduce unsupported quantitative claims.
+Source supported facts:
+VAST Networks, Head of Operations, September 2016 to May 2018, full time.
+Oversaw WiFi deployment across 2,000+ locations with 25,000+ access points.
+Led a 20+ member engineering and support team.
+Improved operational monitoring for scalability and cost control.
+Led vendor negotiations and strategic partnerships.
 
-The live site is not changed by this package. Deployment requires replacing the repository contents and pushing the build to GitHub, after which Netlify can deploy it automatically.
+V14 is a source build and is not live until pushed to GitHub and deployed by Netlify.
