@@ -1,7 +1,7 @@
-# Colin Pinkham Astro site, V9
+# Colin Pinkham Astro site, V11
 
-V9 adds a substantive Internet Africa to UUNET SA case study. It uses the documented career material and incorporates the user's anecdotal context about the energy, youth, rapid growth and expansion across Africa during the period.
+V11 carries forward the UUNET case study and smaller UIA logo, makes the UUNET work card explicitly readable as Internet Africa to UUNET SA, and adds the next case study, Verizon Business to MTN Business.
 
-The site chronology is: 1993 to 1996 TICSA and Internet Africa, 1996 to 2003 UUNET, 2004 to 2009 WorldCom and Verizon Business, 2009 to 2014 MTN Business, 2014 to 2016 Consulting, 2016 to 2018 VAST Networks full time, 2018 to 2022 Consulting, 2022 to 2026 Jembi Health Systems full time.
+The Verizon and MTN case study is based on the existing career archive material and does not introduce unsupported quantitative claims.
 
-No email address is published. The CV page identifies the 2026 CV as the authoritative version used for the site.
+The live site is not changed by this package. Deployment requires replacing the repository contents and pushing the build to GitHub, after which Netlify can deploy it automatically.
