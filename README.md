@@ -1,16 +1,7 @@
-# ColinPinkham.com — Astro site
+# Colin Pinkham Astro site, V9
 
-Static Astro site for Colin Pinkham's professional portfolio, career timeline and selected writing.
+V9 adds a substantive Internet Africa to UUNET SA case study. It uses the documented career material and incorporates the user's anecdotal context about the energy, youth, rapid growth and expansion across Africa during the period.
 
-## Current content decisions
-- Homepage career section is a compact "Career at a glance" preview.
-- The full career timeline on `/career` is the authoritative detailed timeline.
-- VAST Networks (2016–2018) and Jembi Health Systems (2022–2026) are full-time roles.
-- Consulting is separated into 2014–2016 and 2018–2022.
-- Company naming uses "MTN Business".
-- The CV page identifies the 2026 CV as the authoritative version.
-- Thinking content is limited to articles 012–016.
+The site chronology is: 1993 to 1996 TICSA and Internet Africa, 1996 to 2003 UUNET, 2004 to 2009 WorldCom and Verizon Business, 2009 to 2014 MTN Business, 2014 to 2016 Consulting, 2016 to 2018 VAST Networks full time, 2018 to 2022 Consulting, 2022 to 2026 Jembi Health Systems full time.
 
-## Netlify
-Build command: `npm run build`
-Publish directory: `dist`
+No email address is published. The CV page identifies the 2026 CV as the authoritative version used for the site.
