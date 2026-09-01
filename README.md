@@ -1,40 +1,16 @@
-# ColinPinkham.com — Astro prototype
+# ColinPinkham.com — Astro site
 
-This is a static-site prototype for colinpinkham.com, based on the 2026 CV and the recovered WordPress/HTML archive supplied for the project.
+Static Astro site for Colin Pinkham's professional portfolio, career timeline and selected writing.
 
-## Run locally
+## Current content decisions
+- Homepage career section is a compact "Career at a glance" preview.
+- The full career timeline on `/career` is the authoritative detailed timeline.
+- VAST Networks (2016–2018) and Jembi Health Systems (2022–2026) are full-time roles.
+- Consulting is separated into 2014–2016 and 2018–2022.
+- Company naming uses "MTN Business".
+- The CV page identifies the 2026 CV as the authoritative version.
+- Thinking content is limited to articles 012–016.
 
-Requirements: Node.js 20+.
-
-```bash
-npm install
-npm run dev
-```
-
-Then open the local Astro URL shown in the terminal.
-
-## Build
-
-```bash
-npm run build
-npm run preview
-```
-
-## Structure
-
-- `/` — current professional positioning
-- `/about` — profile and context
-- `/work` — selected work / evidence
-- `/career` — 1993–present timeline
-- `/thinking` — articles and career archive
-- `/cv` — current CV downloads
-- `/contact` — professional contact
-
-The old WordPress material is deliberately treated as source content rather than copied presentation. Legacy/demo content is not migrated.
-
-
-## Corrected chronology
-- 2014–2016 Consulting
-- 2016–2018 VAST Networks
-- 2018–2022 Consulting
-- 2022–2026 Jembi Health Systems (full-time)
+## Netlify
+Build command: `npm run build`
+Publish directory: `dist`
