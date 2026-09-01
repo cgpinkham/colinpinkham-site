@@ -2,82 +2,30 @@
 import Base from '../../layouts/BaseLayout.astro';
 
 const items = [
-  [
-    'rfp',
-    'AI-powered RFP & Proposal Pipeline',
-    'Jembi Health Systems',
-    'AI · Automation · Proposal Management',
-    'An end-to-end workflow covering opportunity ingestion, AI categorisation, partner matching, storage, bid/no-bid scoring and proposal generation.',
-    '/work/rfp'
-  ],
-  [
-    'digital-health',
-    'Digital Health Programme Portfolio',
-    'Jembi Health Systems',
-    'Digital Health · Delivery · Africa',
-    'Leading multi-donor programmes across South Africa, Mozambique, Rwanda, Kenya, Cameroon, Ethiopia and Zambia, with responsibility for budgets, resources, reporting and delivery.',
-    '/work/jembi'
-  ],
-  [
-    'vast',
-    'VAST Networks WiFi deployment',
-    'VAST Networks',
-    'Infrastructure Operations',
-    'Oversaw deployment across 2,000+ locations and 25,000 access points while leading a 20+ member engineering and support team.',
-    '/work/vast'
-  ],
-  [
-    'mtn',
-    'Verizon Business to MTN Business',
-    'MTN Business',
-    'CIO · Integration · Transformation',
-    'Led technology strategy and migration through the sale of the Verizon African operation to MTN Business, including major systems integration and organisational change.',
-    '/work/verizon-mtn'
-  ],
-  [
-    'strategy',
-    'Internet Africa to UUNET SA',
-    'UUNET SA',
-    'Product · Commercial · Africa',
-    'Rapid growth, expansion across Africa, and the transition from network engineering into product, commercial and technology leadership.',
-    '/work/uunet'
-  ],
-  [
-    'internet',
-    'Founding the commercial Internet',
-    'TICSA / Internet Africa',
-    'Internet · Networks · Entrepreneurship',
-    'Built and maintained the original network and helped grow the operation from four customers into a significant African ISP business.',
-    '/work/internet'
-  ]
+  ['rfp','AI-powered RFP & Proposal Pipeline','Jembi Health Systems','AI · Automation · Proposal Management','An end-to-end workflow covering opportunity ingestion, AI categorisation, partner matching, storage, bid/no-bid scoring and proposal generation.','/work/rfp'],
+  ['digital-health','Digital Health Programme Portfolio','Jembi Health Systems','Digital Health · Delivery · Africa','Leading multi-donor programmes across South Africa, Mozambique, Rwanda, Kenya, Cameroon, Ethiopia and Zambia, with responsibility for budgets, resources, reporting and delivery.','/work/jembi'],
+  ['vast','VAST Networks WiFi deployment','VAST Networks','Infrastructure · Operations','Oversaw deployment across 2,000+ locations and 25,000+ access points while leading a 20+ member engineering and support team.','/work/vast'],
+  ['mtn','Verizon Business to MTN Business','MTN Business','CIO · Integration · Transformation','Led technology strategy and migration through the sale of the Verizon African operation to MTN SA for incorporation into MTN Business.','/work/verizon-mtn'],
+  ['strategy','Internet Africa to UUNET SA','UUNET SA','Product · Commercial · Africa','Rapid growth, expansion across Africa, and the transition from network engineering into product, commercial and technology leadership.','/work/uunet'],
+  ['internet','Founding the commercial Internet','TICSA / Internet Africa','Internet · Networks · Entrepreneurship','Built and maintained the original network and helped grow the operation from four customers into a significant African ISP business.','/work/internet']
 ];
 ---
-
 <Base title="Work | Colin Pinkham">
-  <section class="shell page-head">
-    <div class="eyebrow">Selected work</div>
-    <h1>Evidence of what I do.</h1>
-    <p class="kicker">
-      Projects and transformations that show the combination of technology depth,
-      commercial judgement and programme leadership behind the CV.
-    </p>
-  </section>
-
-  <section class="shell section">
-    <div class="cards">
-      {items.map(([id, title, organisation, tags, description, href]) => (
-        <a id={id} class="card" href={href}>
-          <div class="eyebrow">{organisation}</div>
-          <h3>{title}</h3>
-          <p>{description}</p>
-
-          <div class="tags">
-            {tags.split(' · ').map((tag) => (
-              <span class="tag">{tag}</span>
-            ))}
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
+<section class="shell page-head">
+  <div class="eyebrow">Selected work</div>
+  <h1>Evidence of what I do.</h1>
+  <p class="kicker">Projects and transformations that show the combination of technology depth, commercial judgement and programme leadership behind the CV.</p>
+</section>
+<section class="shell section">
+  <div class="cards">
+    {items.map(([id,t,o,tags,p,href]) => (
+      <a id={id} class="card" href={href}>
+        <div class="eyebrow">{o}</div>
+        <h3>{t}</h3>
+        <p>{p}</p>
+        <div class="tags">{tags.split(' · ').map(x => <span class="tag">{x}</span>)}</div>
+      </a>
+    ))}
+  </div>
+</section>
 </Base>

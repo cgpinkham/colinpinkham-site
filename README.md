@@ -1,7 +1,7 @@
-# Colin Pinkham Astro site, V11
+# Colin Pinkham Astro site — V16
 
-V11 carries forward the UUNET case study and smaller UIA logo, makes the UUNET work card explicitly readable as Internet Africa to UUNET SA, and adds the next case study, Verizon Business to MTN Business.
+V16 fixes the Contact page so it contains no email address or email link, fixes the Work index so every case study card links to its actual page, and corrects the relative BaseLayout imports for work pages.
 
-The Verizon and MTN case study is based on the existing career archive material and does not introduce unsupported quantitative claims.
+Case studies exposed from Work: RFP, Jembi, VAST Networks, Verizon Business to MTN Business, Internet Africa to UUNET SA, and Founding the commercial Internet.
 
-The live site is not changed by this package. Deployment requires replacing the repository contents and pushing the build to GitHub, after which Netlify can deploy it automatically.
+V16 is a source build and is not live until pushed to GitHub and deployed by Netlify.
