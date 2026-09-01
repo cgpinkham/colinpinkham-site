@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+const {title='Colin Pinkham | Technology & Digital Health', description='Technology, digital health and programme leadership across Africa.'}=Astro.props;
+const path=Astro.url.pathname;
+const nav=[['About','/about'],['Work','/work'],['Career','/career'],['Thinking','/thinking'],['CV','/cv']];
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<link rel="canonical" href={`https://colinpinkham.com${path}`} />
+</head>
+<body>
+<header class="header"><div class="shell header-inner">
+<a class="wordmark" href="/">COLIN PINKHAM<span>.</span></a>
+<nav aria-label="Primary">{nav.map(([label,href])=><a class:list-active={path===href || (href!=='/' && path.startsWith(href+'/'))} href={href}>{label}</a>)}</nav>
+<a class="contact-link" href="/contact">Contact</a>
+</div></header>
+<main><slot /></main>
+<footer class="footer"><div class="shell footer-grid"><div><div class="wordmark">COLIN PINKHAM<span>.</span></div><p>Technology · Digital Health · Programme Leadership</p></div><div class="footer-links"><a href="https://www.linkedin.com/in/cgpinkham" rel="me">LinkedIn</a><a href="mailto:colin@mobiusrex.com">Email</a><a href="/cv">CV</a></div><div class="copyright">© {new Date().getFullYear()} Colin Pinkham</div></div></footer>
+</body></html>
