@@ -1,4 +1,56 @@
 ---
-import Base from '../layouts/BaseLayout.astro';
+import Base from "../layouts/BaseLayout.astro";
 ---
-<Base title="Contact | Colin Pinkham"><section class="shell page-head"><div class="eyebrow">Contact</div><h1>Let's connect.</h1><p class="kicker">For consulting, programme leadership, technology strategy or simply to continue a conversation.</p></section><section class="shell section split"><div><div class="eyebrow">Email</div><h2><a href="mailto:"></a></h2><div class="eyebrow" style="margin-top:45px">LinkedIn</div><h2><a href="https://www.linkedin.com/in/cgpinkham">/in/cgpinkham</a></h2></div><div class="feature"><div class="eyebrow">Professional profile</div><h2>Technology · Digital Health · Africa</h2><p>Explore selected work, the career timeline and the longer archive, or download the current CV.</p><a class="button secondary" href="/cv">View CV</a></div></section></Base>
+<Base title="Contact | Colin Pinkham" description="Get in touch about technology leadership, digital health, programme leadership and related work across Africa.">
+  <section class="shell page-head">
+    <div class="eyebrow">Contact</div>
+    <h1>Let’s connect.</h1>
+    <p class="kicker">For consulting, programme leadership, technology strategy, digital health or related opportunities.</p>
+  </section>
+
+  <section class="shell section contact-grid">
+    <div>
+      <div class="eyebrow">Send a message</div>
+      <h2>Choose how you would like me to respond.</h2>
+      <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden-field"><label>Do not fill this in: <input name="bot-field" /></label></p>
+
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+
+        <label for="response">Preferred response</label>
+        <select id="response" name="preferred-response" required>
+          <option value="">Select an option</option>
+          <option value="email">Email</option>
+          <option value="linkedin">LinkedIn</option>
+        </select>
+
+        <label for="email">Email address <span class="field-note">required for an email reply</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" required></textarea>
+
+        <button class="button" type="submit">Send message</button>
+        <p class="form-note">Your email address is not published on this site. It is collected only when you choose email as your preferred response.</p>
+
+        <script>
+          const response = document.querySelector('#response');
+          const email = document.querySelector('#email');
+          const updateEmailRequirement = () => {
+            if (email && response) email.required = response.value === 'email';
+          };
+          response?.addEventListener('change', updateEmailRequirement);
+          updateEmailRequirement();
+        </script>
+      </form>
+    </div>
+
+    <aside class="contact-aside">
+      <div class="eyebrow">LinkedIn</div>
+      <h2><a href="https://www.linkedin.com/in/cgpinkham" rel="me">/in/cgpinkham</a></h2>
+      <p>LinkedIn is also available if you prefer to connect there.</p>
+    </aside>
+  </section>
+</Base>
