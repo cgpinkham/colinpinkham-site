@@ -1,7 +1,16 @@
-# Colin Pinkham Astro site — V16
+# Colin Pinkham Astro site, V22
 
-V16 fixes the Contact page so it contains no email address or email link, fixes the Work index so every case study card links to its actual page, and corrects the relative BaseLayout imports for work pages.
+V22 is a controlled mobile navigation revision based on V21.
 
-Case studies exposed from Work: RFP, Jembi, VAST Networks, Verizon Business to MTN Business, Internet Africa to UUNET SA, and Founding the commercial Internet.
+Changes:
+* Replaces the previous mobile navigation CSS with one explicit checkbox based implementation.
+* Mobile header shows a clearly labelled Menu control and hamburger icon.
+* Opening the control reveals About, Work, Career, Thinking, CV and Contact.
+* Desktop navigation and desktop Contact control remain unchanged.
+* Retains the V21 homepage portrait sizing fix.
 
-V16 is a source build and is not live until pushed to GitHub and deployed by Netlify.
+Validation:
+* BaseLayout.astro and global.css were inspected directly after modification.
+* The mobile navigation selector and markup were checked for matching structure.
+* A full Astro production build could not be completed in this environment because the Astro dependency is not installed locally and package installation times out.
+* Therefore this package is NOT described as browser-validated or production-validated. Use a Netlify Deploy Preview, not a production deploy, for validation.
