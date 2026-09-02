@@ -18,9 +18,29 @@ const nav=[['About','/about'],['Work','/work'],['Career','/career'],['Thinking',
 <body>
 <header class="header"><div class="shell header-inner">
 <a class="wordmark" href="/">COLIN PINKHAM<span>.</span></a>
-<nav aria-label="Primary">{nav.map(([label,href])=><a class:list-active={path===href || (href!=='/' && path.startsWith(href+'/'))} href={href}>{label}</a>)}</nav>
+<nav class="desktop-nav" aria-label="Primary">{nav.map(([label,href])=><a class:list-active={path===href || (href!=='/' && path.startsWith(href+'/'))} href={href}>{label}</a>)}</nav>
 <a class="contact-link" href="/contact">Contact</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span></span><span></span><span></span>
+</button>
+<div id="mobile-menu" class="mobile-menu" hidden>
+<nav aria-label="Mobile primary">{nav.map(([label,href])=><a class:list-active={path===href || (href!=='/' && path.startsWith(href+'/'))} href={href}>{label}</a>)}</nav>
+<a class="mobile-contact" href="/contact">Contact</a>
+</div>
 </div></header>
 <main><slot /></main>
 <footer class="footer"><div class="shell footer-grid"><div><div class="wordmark">COLIN PINKHAM<span>.</span></div><p>Technology · Digital Health · Programme Leadership</p></div><div class="footer-links"><a href="https://www.linkedin.com/in/cgpinkham" rel="me">LinkedIn</a><a href="/cv">CV</a></div><div class="copyright">© {new Date().getFullYear()} Colin Pinkham</div></div></footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('#mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      menu.hidden = open;
+      document.body.classList.toggle('menu-open', !open);
+    });
+  }
+</script>
 </body></html>
