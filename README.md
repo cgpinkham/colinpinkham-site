@@ -1,7 +1,20 @@
-# Colin Pinkham Astro site — V16
+# Colin Pinkham Astro site, V20
 
-V16 fixes the Contact page so it contains no email address or email link, fixes the Work index so every case study card links to its actual page, and corrects the relative BaseLayout imports for work pages.
+V20 is a corrective mobile navigation build.
 
-Case studies exposed from Work: RFP, Jembi, VAST Networks, Verizon Business to MTN Business, Internet Africa to UUNET SA, and Founding the commercial Internet.
+Changes:
+* Removed the obsolete JavaScript mobile menu CSS.
+* Kept one native HTML `<details>` mobile navigation implementation.
+* Mobile navigation contains About, Work, Career, Thinking, CV and Contact.
+* The desktop Contact button is hidden at mobile widths, so it cannot appear as the only mobile navigation item.
+* Desktop navigation remains unchanged.
+* Corrected Jembi date wording to 2022–2026 where applicable.
 
-V16 is a source build and is not live until pushed to GitHub and deployed by Netlify.
+Validation performed on the source:
+* BaseLayout contains the mobile menu and all six primary navigation links plus Contact.
+* There is one `.mobile-nav` rule and one `.mobile-menu` rule in the stylesheet.
+* No `2022–Present` or `2022-Present` remains in `src`.
+* Required Contact success and 404 pages are present.
+
+Limitation:
+* Full Astro compilation could not be run because `npm install --no-audit --no-fund` timed out in this environment. Netlify remains the deployment build validator.

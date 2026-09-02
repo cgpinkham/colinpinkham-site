@@ -18,9 +18,17 @@ const nav=[['About','/about'],['Work','/work'],['Career','/career'],['Thinking',
 <body>
 <header class="header"><div class="shell header-inner">
 <a class="wordmark" href="/">COLIN PINKHAM<span>.</span></a>
-<nav aria-label="Primary">{nav.map(([label,href])=><a class:list-active={path===href || (href!=='/' && path.startsWith(href+'/'))} href={href}>{label}</a>)}</nav>
+<nav class="desktop-nav" aria-label="Primary">{nav.map(([label,href])=><a class:list-active={path===href || (href!=='/' && path.startsWith(href+'/'))} href={href}>{label}</a>)}</nav>
+<details class="mobile-nav">
+<summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+<div class="mobile-menu">
+<nav aria-label="Mobile primary">{nav.map(([label,href])=><a class:list-active={path===href || (href!=='/' && path.startsWith(href+'/'))} href={href}>{label}</a>)}</nav>
+<a class="mobile-contact" href="/contact">Contact</a>
+</div>
+</details>
 <a class="contact-link" href="/contact">Contact</a>
 </div></header>
 <main><slot /></main>
 <footer class="footer"><div class="shell footer-grid"><div><div class="wordmark">COLIN PINKHAM<span>.</span></div><p>Technology · Digital Health · Programme Leadership</p></div><div class="footer-links"><a href="https://www.linkedin.com/in/cgpinkham" rel="me">LinkedIn</a><a href="/cv">CV</a></div><div class="copyright">© {new Date().getFullYear()} Colin Pinkham</div></div></footer>
+
 </body></html>
