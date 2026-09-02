@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://colinpinkham.com/sitemap.xml
