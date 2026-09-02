@@ -21,3 +21,21 @@
 
 .contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.65fr);gap:90px}.contact-form{max-width:720px;margin-top:35px;display:grid;gap:9px}.contact-form label{font-weight:600;margin-top:12px}.contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid var(--line);background:var(--surface);padding:12px 14px;font:inherit;color:var(--ink);border-radius:0}.contact-form textarea{resize:vertical}.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid var(--accent);outline-offset:1px}.contact-form .button{border:1px solid var(--ink);cursor:pointer;margin-top:18px}.field-note{font-size:12px;font-weight:400;color:var(--muted)}.form-note{font-size:13px;color:var(--muted);margin:8px 0 0}.hidden-field{position:absolute;left:-9999px}.contact-aside{border-left:1px solid var(--line);padding-left:30px;align-self:start}.contact-aside h2{font:600 28px/1.2 "Space Grotesk";margin:8px 0 15px}.success-page,.not-found{padding-bottom:110px}
 @media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:55px}.contact-aside{border-left:0;border-top:1px solid var(--line);padding:25px 0 0}}
+
+/* Mobile navigation, native details element, no JavaScript required */
+.mobile-nav{display:none}
+@media(max-width:760px){
+  .mobile-nav{display:block;position:relative}
+  .mobile-nav summary{list-style:none;display:flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:0;cursor:pointer}
+  .mobile-nav summary::-webkit-details-marker{display:none}
+  .mobile-nav summary:before,.mobile-nav summary:after{content:'';position:absolute;width:20px;height:2px;background:currentColor;transition:.15s}
+  .mobile-nav summary:before{transform:translateY(-4px)}
+  .mobile-nav summary:after{transform:translateY(4px)}
+  .mobile-nav[open] summary:before{transform:rotate(45deg)}
+  .mobile-nav[open] summary:after{transform:rotate(-45deg)}
+  .mobile-menu{display:block;position:absolute;right:-20px;top:51px;width:min(320px,calc(100vw - 40px));background:var(--surface);border:1px solid var(--line);padding:8px 20px 20px;box-shadow:0 10px 20px rgba(23,35,33,.08);z-index:30}
+  .mobile-menu nav{display:flex;flex-direction:column;gap:0;font-size:16px}
+  .mobile-menu nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .mobile-menu .mobile-contact{display:block;margin-top:14px;padding:12px 15px;border:1px solid var(--ink);text-align:center}
+}
+@media(min-width:761px){.mobile-nav{display:none!important}}
